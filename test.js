@@ -19,9 +19,11 @@ async function test() {
 
     let end = fs.readFileSync("End.bpmn", "utf-8");
 
+    let dobozEsDoboz = fs.readFileSync("Doboz&Doboz.bpmn", "utf-8");
+
     const {
         rootElement: definitions
-    } = await moddle.fromXML(end);
+    } = await moddle.fromXML(dobozEsDoboz);
 
     console.log(definitions);
 
